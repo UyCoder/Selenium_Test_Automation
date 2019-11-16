@@ -46,7 +46,7 @@ public class maharaAutomation_TestCase1 {
         //Enter Groupname in the textfield ...id=editgroup_name
         WebElement groupNameElement = browser.findElement(By.id("editgroup_name"));
         waitUntilElementVisiable(browser, groupNameElement);
-        groupNameElement.sendKeys("Student Group");
+        groupNameElement.sendKeys("Student_Group");
         //Click on "Save Group" button id=editgroup_submit
         WebElement saveGroupeButton = browser.findElement(By.id("editgroup_submit"));
         waitUntilElementVisiable(browser, saveGroupeButton);

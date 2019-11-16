@@ -46,7 +46,7 @@ public class maharaAutomation_TestCase2 {
         //Enter Groupname in the textfield ...id=editgroup_name
         WebElement groupNameElement = browser.findElement(By.id("editgroup_name"));
         waitUntilElementVisiable(browser, groupNameElement);
-        groupNameElement.sendKeys("User Group");
+        groupNameElement.sendKeys("User_Group");
         //Click on "Save Group" button id=editgroup_submit
         WebElement saveGroupeButton = browser.findElement(By.id("editgroup_submit"));
         waitUntilElementVisiable(browser, saveGroupeButton);
@@ -70,6 +70,7 @@ public class maharaAutomation_TestCase2 {
         browser.close();
         browser.quit();
     }
+
 
     // create the waitUtilElementVisible method
     public static void waitUntilElementVisiable(WebDriver driver, WebElement webElement) {
