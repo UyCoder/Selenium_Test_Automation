@@ -69,7 +69,6 @@ public class maharaAutomation_TestCase2 {
         // close the browser and terminate the process
         browser.close();
         browser.quit();
-
     }
 
     // create the waitUtilElementVisible method
