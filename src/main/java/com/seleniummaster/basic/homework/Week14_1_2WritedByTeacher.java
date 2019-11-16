@@ -13,29 +13,27 @@ import java.util.Scanner;
  */
 
 public class Week14_1_2WritedByTeacher {
-        public static void main(String[] args) {
-            System.out.print("Please input a number from the console: ");
-            Scanner input=new Scanner(System.in);
-            int number=input.nextInt();
-            String primeNumbers="";
-            int totalPrime=0;  //initial prime number count
-            for(int i=2;i<=number;i++)  //loop the number up to the number from the console
+    public static void main(String[] args) {
+        System.out.print("Please input a number from the console: ");
+        Scanner input = new Scanner(System.in);
+        int number = input.nextInt();
+        String primeNumbers = "";
+        int totalPrime = 0;  //initial prime number count
+        for (int i = 2; i <= number; i++)  //loop the number up to the number from the console
+        {
+            int count = 0;
+            for (int j = 1; j <= i; j++)  //for ever number, we check the number from 1 up to that number
             {
-                int count=0;
-                for(int j=1;j<=i;j++)  //for ever number, we check the number from 1 up to that number
-                {
-                    if(i%j==0)
-                    {
-                        count++;
-                    }
-                }
-                if(count==2)
-                {
-                    primeNumbers=primeNumbers+","+i;
-                    totalPrime++;
+                if (i % j == 0) {
+                    count++;
                 }
             }
-            System.out.println(primeNumbers);
-            System.out.println("Total prime numbers: "+totalPrime);
+            if (count == 2) {
+                primeNumbers = primeNumbers + "," + i;
+                totalPrime++;
+            }
         }
+        System.out.println(primeNumbers);
+        System.out.println("Total prime numbers: " + totalPrime);
     }
+}
