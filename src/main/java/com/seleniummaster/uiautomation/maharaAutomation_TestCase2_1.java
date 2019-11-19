@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
-public class maharaAutomation_TestCase2 {
+public class maharaAutomation_TestCase2_1 {
     public static void main(String[] args) {
         //setup system variable for chromedriver
         System.setProperty("webdriver.chrome.driver", "c:\\webdriver\\chromedriver.exe");
@@ -46,7 +46,13 @@ public class maharaAutomation_TestCase2 {
         //Enter Groupname in the textfield ...id=editgroup_name
         WebElement groupNameElement = browser.findElement(By.id("editgroup_name"));
         waitUntilElementVisiable(browser, groupNameElement);
-        groupNameElement.sendKeys("UserGroup");
+        //add System.currentTimeMillis() for making groupe name unique each time
+        // but if we want to use that group name after, we need to craete variable
+        // and use after.
+        groupNameElement.sendKeys("UserGroup"+System.currentTimeMillis());
+        // if want to input message in iframe we need to add following code
+        // for entering iframe : browsen.swithTo().frame("");
+        // for switch back from iframe : browser.swithTo().parentFrame();
         //Click on "Save Group" button id=editgroup_submit
         WebElement saveGroupeButton = browser.findElement(By.id("editgroup_submit"));
         waitUntilElementVisiable(browser, saveGroupeButton);

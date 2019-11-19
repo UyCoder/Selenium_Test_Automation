@@ -36,7 +36,7 @@ public class maharaAutomation_TestCase1 {
         waitUntilElementVisiable(browser, userMenu);
         boolean isLoginSuccess = userMenu.isDisplayed();
         // Click on "Engage" button ... xpath=//div[@id='home-info-engage']//div[@class='widget-heading']
-        WebElement engageButton = browser.findElement(By.xpath("//div[@id='home-info-engage']//div[@class='widget-heading']"));
+        WebElement engageButton = browser.findElement(By.xpath("//div[@id='home-info-engage']"));
         waitUntilElementVisiable(browser, engageButton);
         engageButton.click();
         // Click on "Create Group" button ...xpath=//a[@class='btn btn-secondary creategroup']

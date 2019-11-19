@@ -2,7 +2,7 @@ package com.seleniummaster;
 
 import java.util.Scanner;
 
-public class Question {
+public class Question_selection {
     public static void main(String[] args) {
         // print out the question
         System.out.println("========================================");
@@ -15,7 +15,8 @@ public class Question {
         //add scanner feature
         Scanner scan = new Scanner(System.in);
         System.out.println("Select one:");
-        String seletedAnswer = scan.next();
+        String seletedAnswer =scan.next();
+
         // if statement for the answer if its wrong or right
         if (seletedAnswer.equalsIgnoreCase("A")) {
             System.out.println("Good job!"); //if select right answer, terminate the code.
@@ -36,7 +37,5 @@ public class Question {
 // Even if I choose the write answer, it always shows 'wrong'.
 // When I use char datatype on line 19 it worked.
 // line 19: char seletedAnswer= scan.next().charAt(0);
-// line 23: if (seletedAnswer=='A'){
-// جاۋابىنى ئۆزۈم تاپتىم.. چۈنكى 23- قۇرىدىكى ئىف نىڭ شەرتىگە == يېزىلمايدۇ.
-// چۈنكى شەرتى سترىڭ بولغاچقا مۇنداق يېزىش كېرەك:
+// line 23: if (seletedAnswer=='A')
 //  seletedAnswer.equalsIgnoreCase("A")
