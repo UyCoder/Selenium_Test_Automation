@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
-public class maharaAutomation_TestCase2 {
+public class MaharaAutomation_TestCase2 {
     public static void main(String[] args) {
         //setup system variable for chromedriver
         System.setProperty("webdriver.chrome.driver", "c:\\webdriver\\chromedriver.exe");

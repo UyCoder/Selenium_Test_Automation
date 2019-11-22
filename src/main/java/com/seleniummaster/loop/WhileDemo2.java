@@ -1,6 +1,6 @@
 package com.seleniummaster.loop;
 
-public class whileDemo2 {
+public class WhileDemo2 {
     public static void main(String[] args) {
         double balance = 50000;
         double targetBalance = 300000;

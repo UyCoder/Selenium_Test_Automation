@@ -10,7 +10,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import java.util.ArrayList;
 import java.util.List;
 
-public class amazonSearch2 {
+public class AmazonSearch2 {
     public static void main(String[] args) {
         //add chromedriver to the system property
         //for windows :

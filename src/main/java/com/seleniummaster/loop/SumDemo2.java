@@ -2,7 +2,7 @@ package com.seleniummaster.loop;
 
 import java.util.Scanner;
 
-public class sumDemo2 {
+public class SumDemo2 {
     public static void main(String[] args) {
         int sum=0;
         Scanner input= new Scanner(System.in);

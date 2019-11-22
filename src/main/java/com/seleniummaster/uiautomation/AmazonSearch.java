@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.util.concurrent.TimeUnit;
 
-public class amazonSearch {
+public class AmazonSearch {
     public static void main(String[] args) {
         //add chromedriver to the system property
         //for windows :

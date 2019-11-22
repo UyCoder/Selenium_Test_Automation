@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
-public class googleSearchPageDemo {
+public class GoogleSearchPageDemo {
     public static void main(String[] args) {
         System.setProperty("webdriver.crhome.driver", "c:\\webdriver\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();

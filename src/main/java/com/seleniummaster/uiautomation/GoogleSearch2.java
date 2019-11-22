@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import java.util.concurrent.TimeUnit;
 
-public class googleSearch2 {
+public class GoogleSearch2 {
     public static void main(String[] args) {
         //add chromedriver to the system property
         //for windows :

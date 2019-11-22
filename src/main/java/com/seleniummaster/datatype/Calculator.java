@@ -1,6 +1,6 @@
 package com.seleniummaster.datatype;
 
-public class calculator {
+public class Calculator {
     public static void main(String[] args) {
         /**Write a claculator program to calculate +, -, * and / of two numbers
          * Please pass the numbers and operators as arguments

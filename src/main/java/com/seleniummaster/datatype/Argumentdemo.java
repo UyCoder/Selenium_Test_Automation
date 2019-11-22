@@ -1,6 +1,6 @@
 package com.seleniummaster.datatype;
 
-public class argumentdemo {
+public class Argumentdemo {
     public static void main(String[] args) {
         //use argument value in the calculation
         int x=Integer.parseInt(args[0]);

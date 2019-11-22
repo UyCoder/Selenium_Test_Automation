@@ -1,6 +1,6 @@
 package com.seleniummaster.loop;
 
-public class sumDemo4 {
+public class SumDemo4 {
     public static void main(String[] args) {
 
         int evenSum=0;

@@ -1,6 +1,6 @@
 package com.seleniummaster.loop;
 
-public class loopBreakDemo {
+public class LoopBreakDemo {
     public static void main(String[] args) {
        for(int i=1; i<=1000; i++)
        {

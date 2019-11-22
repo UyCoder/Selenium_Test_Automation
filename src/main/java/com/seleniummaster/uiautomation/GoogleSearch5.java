@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.concurrent.TimeUnit;
 
-public class googleSearch3 {
+public class GoogleSearch5 {
     public static void main(String[] args) throws InterruptedException {
         //add chromedriver to the system property
         //for windows :
@@ -26,9 +26,11 @@ public class googleSearch3 {
         //define the web element
 
         //loop the search 5 times
-        for(int i=1; i<5;i++) {
+        String[] keywords=new String[]{"Java", "Python", "Ruby", "html", "javascript"};
+        for(String keyword:keywords) {
             WebElement searchBox = webDriver.findElement(By.name("q"));
-            searchBox.sendKeys("Selenium" + Keys.ENTER);
+            System.out.println("Keywords: "+keyword);
+            searchBox.sendKeys(keyword + Keys.ENTER);
             WebElement searchresult = webDriver.findElement(By.id("resultStats"));
             if (searchresult.isDisplayed()) {
                 System.out.println("Google search passed.");

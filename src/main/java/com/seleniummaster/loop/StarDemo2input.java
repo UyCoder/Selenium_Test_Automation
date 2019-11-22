@@ -2,7 +2,7 @@ package com.seleniummaster.loop;
 
 import java.util.Scanner;
 
-public class starDemo2input {
+public class StarDemo2input {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Input the line number: ");

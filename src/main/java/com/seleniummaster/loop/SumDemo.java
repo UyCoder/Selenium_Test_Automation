@@ -1,9 +1,6 @@
 package com.seleniummaster.loop;
 
-import com.sun.xml.internal.ws.server.ServerRtException;
-import org.metawidget.jsp.JspUtils;
-
-public class sumDemo {
+public class SumDemo {
     public static void main(String[] args) {
         int sum=0;
         System.out.println(String.format("sum=%d",sum));
@@ -13,6 +10,12 @@ public class sumDemo {
             sum = sum+1;
            // if(i%2==0) // only print even number
             System.out.println(String.format("i=%d  sum=%d",i,sum));
+        }
+    }
+
+    public static class PrintExample {
+        public static void main(String[] args) {
+            System.out.println("1/0");
         }
     }
 }

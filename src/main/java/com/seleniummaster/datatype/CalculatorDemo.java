@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class CalculatorDemo {
     public static void main(String[] args) {
-        // design a simple calculator to add two number
+        // design a simple Calculator to add two number
         // you need to input two numbers from the console
         Scanner number=new Scanner(System.in);
         System.out.println("Please input first number..");

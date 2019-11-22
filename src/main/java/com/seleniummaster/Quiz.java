@@ -2,7 +2,7 @@ package com.seleniummaster;
 
 import java.util.Scanner;
 
-public class Question_selection {
+public class Quiz {
     public static void main(String[] args) {
         // print out the question
         System.out.println("========================================");

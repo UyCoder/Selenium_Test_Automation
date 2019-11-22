@@ -1,6 +1,6 @@
 package com.seleniummaster.loop;
 
-public class starDemo {
+public class StarDemo {
     public static void main(String[] args) {
         // print a trianle with the * symbol
         for (int row=1; row<=5;row++)
