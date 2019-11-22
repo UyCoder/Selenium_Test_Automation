@@ -1,5 +1,5 @@
 package com.seleniummaster.myowntry.quiz;
-
+// make object named "Question" for quiz app.
 public class Question {
     String prompt;
     String answer;

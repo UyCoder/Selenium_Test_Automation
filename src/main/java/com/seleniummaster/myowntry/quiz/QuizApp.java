@@ -2,8 +2,9 @@ package com.seleniummaster.myowntry.quiz;
 
 import java.util.Scanner;
 
-public class App {
+public class QuizApp {
     public static void main(String[] args) {
+        //define all questions as String q[n]..
         String q1 = "What color are apples?\n" +
                 "(a)Red\n(b)Orenge\n(c)Magenta\n";
         String q2 = "What color are bananas?\n" +
@@ -14,10 +15,12 @@ public class App {
                 new Question(q1,"a"),
                 new Question(q2,"b")
         };
-        takeTest(questions);
+        takeTest(questions); // call the "takeTest" method below
     }
 
     public static void takeTest(Question[] questions) {
+        // this takeTest method will loop over all the qustions in "Question"array
+        // and give the final result
         int score =0;
         Scanner keyboardinput= new Scanner(System.in);
         for (int i = 0; i < questions.length; i++) {
@@ -29,7 +32,6 @@ public class App {
         }
         double finalScore = 100 * ((double) score / (double) questions.length);
         System.out.println(finalScore);
-
         //System.out.println("You got "+score +"/" +questions.length);
     }
 }
