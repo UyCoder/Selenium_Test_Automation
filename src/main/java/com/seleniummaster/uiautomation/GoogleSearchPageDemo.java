@@ -43,7 +43,7 @@ public class GoogleSearchPageDemo {
 
 
     }
-
+// for wait the element display
     public static void waitForElelement(WebDriver driver, WebElement webElement) {
         WebDriverWait webDriverWait = new WebDriverWait(driver, 60);
         webDriverWait.until(ExpectedConditions.visibilityOf(webElement));

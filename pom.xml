@@ -36,7 +36,7 @@
                     <archive>
                         <manifest>
                             <!-- Jar file entry point -->
-                            <mainClass>com.seleniummaster.basic.homework.Week13_1_4_TestLoginMahara</mainClass>
+                            <mainClass>com.seleniummaster.homework.Week13_1_4_TestLoginMahara</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>

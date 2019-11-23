@@ -1,5 +1,7 @@
 package com.seleniummaster.datatype;
 
+import com.seleniummaster.classtutorial.School;
+
 public class TypeConversionsDemo {
     public static void main(String[] args) {
         //widening casting
@@ -31,7 +33,7 @@ public class TypeConversionsDemo {
         /**Integer.parseInt();
          * Long.parseLong();
          * Double.parseDouble();*/
-        int sum = i+Integer.parseInt(myNmabuer);//convert numeric string to integer
+        int sum = i + Integer.parseInt(myNmabuer);//convert numeric string to integer
         System.out.println(sum);
         float f2=Float.valueOf(myNmabuer);
         System.out.println(f2);
