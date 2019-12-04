@@ -46,7 +46,7 @@ public class Week15MaharaAutomation_StudentPlanModule {
         waitUntilElementVisiable(browser, userMenu);
         boolean isLoginSuccess = userMenu.isDisplayed();
         if (isLoginSuccess){
-            System.out.println("0. User logged in successfully.\t✓ ");
+            System.out.println("0. User logged in successfully. ");
         }
         System.out.println("=================================");
         /* Step 6 */
@@ -70,13 +70,13 @@ public class Week15MaharaAutomation_StudentPlanModule {
         waitUntilElementVisiable(browser, newPlan);
         newPlan.click();
         /* Step 10 */
-        //Enter the title of the new plan on Title field
-        WebElement titleOfNewPlan = browser.findElement(By.xpath("//input[@id='addplan_title']"));
+        //Enter the title of the new plan on Title field     //input[@id='addplan_title']
+        WebElement titleOfNewPlan = browser.findElement(By.id("addplan_title"));
         waitUntilElementVisiable(browser, titleOfNewPlan);
         titleOfNewPlan.sendKeys("New_plan_ahmed");
         /* Step 11 */
-        //Enter the description of the new plan on the Description text field.
-        WebElement descriptionOfNewPlan= browser.findElement(By.xpath("//textarea[@id='addplan_description']"));
+        //Enter the description of the new plan on the Description text field.    //textarea[@id='addplan_description']
+        WebElement descriptionOfNewPlan= browser.findElement(By.id("addplan_description"));
         waitUntilElementVisiable(browser, descriptionOfNewPlan);
         descriptionOfNewPlan.sendKeys("This plan is created by ahmed.");
         /* Step 12 */
@@ -94,8 +94,8 @@ public class Week15MaharaAutomation_StudentPlanModule {
         waitUntilElementVisiable(browser, tags);
         tags.sendKeys("student_plan");
         /* Step 15 */
-        //Click on the "Save Plan" button
-        WebElement savePlan = browser.findElement(By.xpath("//button[@id='addplan_submit']"));
+        //Click on the "Save Plan" button    //button[@id='addplan_submit']
+        WebElement savePlan = browser.findElement(By.id("addplan_submit"));
         waitUntilElementVisiable(browser, savePlan);
         savePlan.click();
         /* Step 16 */
@@ -141,13 +141,13 @@ public class Week15MaharaAutomation_StudentPlanModule {
         waitUntilElementVisiable(browser, newTask);
         newTask.click();
         /* Step 22 */
-        //Enter the title for the task on the title text field
-        WebElement taskTitle = browser.findElement(By.xpath("//input[@id='edittask_title']"));
+        //Enter the title for the task on the title text field    //input[@id='edittask_title']
+        WebElement taskTitle = browser.findElement(By.id("edittask_title"));
         waitUntilElementVisiable(browser, taskTitle);
         taskTitle.sendKeys("New_task_ahmed");
         /* Step 23 */
-        //Enter the description of the new task on the Description text field.
-        WebElement descriptionsOfTask = browser.findElement(By.xpath("//textarea[@id='edittask_description']"));
+        //Enter the description of the new task on the Description text field.   //textarea[@id='edittask_description']
+        WebElement descriptionsOfTask = browser.findElement(By.id("edittask_description"));
         waitUntilElementVisiable(browser, descriptionsOfTask);
         descriptionsOfTask.sendKeys("This task is created by ahmed.");
         /* Step 24 */
@@ -156,8 +156,8 @@ public class Week15MaharaAutomation_StudentPlanModule {
         waitUntilElementVisiable(browser, tagsoftask);
         tagsoftask.sendKeys("Student_task");
         /* Step 25 */
-        //Click on the "Save task" button
-        WebElement saveTask = browser.findElement(By.xpath("//button[@id='edittask_submit']"));
+        //Click on the "Save task" button     //button[@id='edittask_submit']
+        WebElement saveTask = browser.findElement(By.id("edittask_submit"));
         waitUntilElementVisiable(browser, saveTask);
         saveTask.click();
         /* Step 26 */
@@ -202,13 +202,13 @@ public class Week15MaharaAutomation_StudentPlanModule {
         waitUntilElementVisiable(browser, edit3);
         edit3.click();
         /* Step 32 */
-        //Enter the description of the new task on the Description text field.
-        WebElement descriptionOfNewTask = browser.findElement(By.xpath("//textarea[@id='edittask_description']"));
+        //Enter the description of the new task on the Description text field.   //textarea[@id='edittask_description']
+        WebElement descriptionOfNewTask = browser.findElement(By.id("edittask_description"));
         waitUntilElementVisiable(browser,descriptionOfNewTask);
         descriptionOfNewTask.sendKeys("This task is edited by ahmed.");
         /* Step 33 */
-        //Click on the "Sava task" button
-        WebElement saveTask3 = browser.findElement(By.xpath("//button[@id='edittask_submit']"));
+        //Click on the "Sava task" button     //button[@id='edittask_submit']
+        WebElement saveTask3 = browser.findElement(By.id("edittask_submit"));
         waitUntilElementVisiable(browser,saveTask3);
         saveTask3.click();
         /* Step 34 */
@@ -263,8 +263,8 @@ public class Week15MaharaAutomation_StudentPlanModule {
         waitUntilElementVisiable(browser, mainMenuLogout);
         mainMenuLogout.click();
         /* Step 41 */
-        //Click on "Logout"
-        WebElement logout = browser.findElement(By.xpath("//a[@id='logoutbutton']"));
+        //Click on "Logout"     //a[@id='logoutbutton']
+        WebElement logout = browser.findElement(By.id("logoutbutton"));
         waitUntilElementVisiable(browser, logout);
         logout.click();
         /* Step 42 */
@@ -274,9 +274,9 @@ public class Week15MaharaAutomation_StudentPlanModule {
         boolean isLoggedOut = loggedOut.isDisplayed();
         if (isLoggedOut) {
             System.out.println("================================");
-            System.out.println("User logged out successfully.\t✓ ");
+            System.out.println("User logged out successfully.");
         }
-        System.out.println("\nAll Test Case is over.\t✓ ");
+        System.out.println("\nAll Test Case is over.");
 
         //verify the two boolean varible is true or not...
         if (isLoginSuccess && isPlanSaved && isTaskSaved && isTaskSaved3) {
