@@ -1,0 +1,5 @@
+selam alaykum
+this is my code
+this code will display the line mumber
+This is another example of random access file 
+This is another example of random access file 

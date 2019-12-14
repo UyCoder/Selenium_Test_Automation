@@ -12,7 +12,6 @@ import java.util.concurrent.TimeUnit;
 public class MaharaFunctionLibrary {
 
     WebDriver browser ;
-
     public void OpenBrowser(String url) { // url =   "http://mahara.unitedcoderschool.com/mahara/"
         System.setProperty("webdriver.chrome.driver", "c:\\webdriver\\chromedriver.exe");
         browser = new ChromeDriver();
@@ -282,8 +281,6 @@ public class MaharaFunctionLibrary {
         browser.close();
         browser.quit();
     }
-
-
 
 
     public static void waitUntilElementVisiable(WebDriver driver, WebElement webElement) {
