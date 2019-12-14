@@ -1,0 +1,4 @@
+Logout test passed
+Logout test passed
+New client test passed
+Logout test passed
