@@ -5,11 +5,11 @@ import org.apache.commons.io.FileUtils;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.function.Function;
 
 public class AddNewProductTest {
     final static String username = ApplicationConfig.readConfigProperties
             ("config.properties", "cubecartUser");
+
     final static String password = ApplicationConfig.readConfigProperties
             ("config.properties", "cubecartPassword");
     final static String siteUrl = ApplicationConfig.readConfigProperties

@@ -11,7 +11,7 @@ public class ReadCSVfileDemo_PrerecordingVideo {
     public static void main(String[] args) {
         try {
 
-            CsvReader testUsers = new CsvReader("docs\\testuser.csv");
+            CsvReader testUsers = new CsvReader("docs\\writetest.csv");
             testUsers.readHeaders();
             //get total numbers of header column
             int numberOfHeaders = testUsers.getHeaderCount();
