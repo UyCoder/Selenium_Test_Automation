@@ -1,0 +1,3 @@
+TestID,TestModule,TestType,TestResult
+cubecart001,Login,Automation,Pass
+cubecart002,Add Product,Automation,Pass

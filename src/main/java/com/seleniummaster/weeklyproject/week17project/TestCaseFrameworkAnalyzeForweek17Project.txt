@@ -1,0 +1,25 @@
+The steps for automation of week 17 project:
+
+1. The analyze of data we will use in the project
+	1) The data used when Login: 
+		(1) URL:  http://cubecart. unitedcoderschool.com /ecommerce /admin_w4vqap.php
+		(2) username: testautomation
+		(3) password: automation123!
+	2) The data used when add newsletter:
+		(1) Newsletter Subject: Newsletter_Subject_test
+		(2) Sender's Name: ahmed
+		(3) Sender's Email Address: buhgra1991@gmail.com
+		(4) Template (dropdown list): Default Newsletter
+		(5) Text Content: this is a test newsletter
+
+2. The analyze of actions we will perform in the project
+	1) Login
+	2) addNewsletter
+	3) verification
+	4) Logout
+
+3. How we run the test
+	Run on laptop.
+
+4. How we report the test result
+	Write our test result as html file.

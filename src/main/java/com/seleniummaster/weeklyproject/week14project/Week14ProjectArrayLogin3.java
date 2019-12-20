@@ -1,4 +1,4 @@
-package com.seleniummaster.weeklyproject;
+package com.seleniummaster.weeklyproject.week14project;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;

@@ -1,4 +1,4 @@
-package com.seleniummaster.weeklyproject;
+package com.seleniummaster.weeklyproject.week14project;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
-public class Week14MaharaAutomation_TestCase1 {
+public class Week14MaharaAutomation_TestCase2_1 {
     public static void main(String[] args) {
         //setup system variable for chromedriver
         System.setProperty("webdriver.chrome.driver", "c:\\webdriver\\chromedriver.exe");
@@ -24,7 +24,7 @@ public class Week14MaharaAutomation_TestCase1 {
         //login implementation
         WebElement userNameElement = browser.findElement(By.id("login_login_username"));
         waitUntilElementVisiable(browser, userNameElement);
-        userNameElement.sendKeys("student");
+        userNameElement.sendKeys("learner");
         WebElement passwordElement = browser.findElement(By.id("login_login_password"));
         waitUntilElementVisiable(browser, passwordElement);
         passwordElement.sendKeys("MaharaDemo");
@@ -35,8 +35,8 @@ public class Week14MaharaAutomation_TestCase1 {
         WebElement userMenu = browser.findElement(By.xpath("//button/span[@class='icon icon-chevron-down collapsed']"));
         waitUntilElementVisiable(browser, userMenu);
         boolean isLoginSuccess = userMenu.isDisplayed();
-        // Click on "Engage" button ... xpath=//div[@id='home-info-engage']//div[@class='widget-heading']
-        WebElement engageButton = browser.findElement(By.xpath("//div[@id='home-info-engage']"));
+        // Click on "Engage" button ... xpath=//h2[contains(text(),'Engage')]
+        WebElement engageButton = browser.findElement(By.xpath("//h2[contains(text(),'Engage')]"));
         waitUntilElementVisiable(browser, engageButton);
         engageButton.click();
         // Click on "Create Group" button ...xpath=//a[@class='btn btn-secondary creategroup']
@@ -46,7 +46,13 @@ public class Week14MaharaAutomation_TestCase1 {
         //Enter Groupname in the textfield ...id=editgroup_name
         WebElement groupNameElement = browser.findElement(By.id("editgroup_name"));
         waitUntilElementVisiable(browser, groupNameElement);
-        groupNameElement.sendKeys("Student_Group");
+        //add System.currentTimeMillis() for making groupe name unique each time
+        // but if we want to use that group name after, we need to craete variable
+        // and use after.
+        groupNameElement.sendKeys("UserGroup"+System.currentTimeMillis());
+        // if want to input message in iframe we need to add following code
+        // for entering iframe : browsen.swithTo().frame("");
+        // for switch back from iframe : browser.swithTo().parentFrame();
         //Click on "Save Group" button id=editgroup_submit
         WebElement saveGroupeButton = browser.findElement(By.id("editgroup_submit"));
         waitUntilElementVisiable(browser, saveGroupeButton);
@@ -69,8 +75,8 @@ public class Week14MaharaAutomation_TestCase1 {
         // close the browser and terminate the process
         browser.close();
         browser.quit();
-
     }
+
 
     // create the waitUtilElementVisible method
     public static void waitUntilElementVisiable(WebDriver driver, WebElement webElement) {

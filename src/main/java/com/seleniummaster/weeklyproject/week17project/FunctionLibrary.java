@@ -1,6 +1,5 @@
 package com.seleniummaster.weeklyproject.week17project;
 
-import com.seleniummaster.configutility.ApplicationConfig;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -24,7 +23,8 @@ public class FunctionLibrary {
         System.setProperty("webdriver.chrome.driver", "c:\\webdriver\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        int timeout = Integer.parseInt(ApplicationConfig.readConfigProperties("config.properties", "timeout"));
+//        int timeout = Integer.parseInt(ApplicationConfig.readConfigProperties("config-week17project.properties", "timeout"));
+        int timeout = Integer.parseInt(testData.timeout);
         driver.manage().timeouts().pageLoadTimeout(timeout, TimeUnit.SECONDS);
         driver.get(url);
     }
@@ -54,24 +54,27 @@ public class FunctionLibrary {
         WebElement newsletterbutton = wait(driver.findElement(By.xpath("//a[contains(text(),'Newsletters')]")));
         newsletterbutton.click();
         WebElement createNewsletterButton = wait(driver.findElement(By.xpath("/html[1]/body[1]/div[2]/div[3]/div[1]/div[2]")));
+        // xpath = //a[contains(text(),'Create Newsletter')]
+        // css = div:nth-child(2) div:nth-child(3) div:nth-child(1) div.tab:nth-child(2) > a:nth-child(1)
+        // linkText = Create Newsletter
+        // PlinkText = Create Newslett
         createNewsletterButton.click();
-        WebElement newslettersubject = wait(driver.findElement(By.xpath("//input[@id='email_subject']")));
+        WebElement newslettersubject = wait(driver.findElement(By.id("email_subject")));
         newslettersubject.sendKeys(newsletterSubject);
-        WebElement senderName = wait(driver.findElement(By.xpath("//input[@id='sender_name']")));
+        WebElement senderName = wait(driver.findElement(By.id("sender_name")));
         senderName.sendKeys(sendersName);
-        WebElement senderemail = wait(driver.findElement(By.xpath("//input[@id='sender_email']")));
+        WebElement senderemail = wait(driver.findElement(By.id("sender_email")));
         senderemail.sendKeys(emailAddress);
         WebElement sedToDouble = wait(driver.findElement(By.xpath("//img[@class='checkbox']")));
         sedToDouble.click();
-
-        WebElement templatedrplst = wait(driver.findElement(By.xpath("//select[@id='template_id']")));
+        WebElement templatedrplst = wait(driver.findElement(By.id("template_id")));
         Select conditionSelect= new Select(templatedrplst);
         conditionSelect.selectByVisibleText(template);
 //        WebElement templatedropdown = wait(driver.findElement(By.xpath("//select[@id='template_id']")));
 //        templatedropdown.getAttribute(template);
         WebElement plainText = wait(driver.findElement(By.xpath("/html[1]/body[1]/div[2]/div[3]/div[1]/div[3]/a[1]")));
         plainText.click();
-        WebElement textArea = wait(driver.findElement(By.xpath("//textarea[@id='content_text']")));
+        WebElement textArea = wait(driver.findElement(By.id("content_text")));
         textArea.sendKeys(textContent);
         WebElement saveButton = wait(driver.findElement(By.xpath("//div[@id='content']//input[3]")));
         saveButton.click();
@@ -79,15 +82,23 @@ public class FunctionLibrary {
         if (saved.isDisplayed()) {
             testResult=true;
         }
+        if (testResult)
+        {
+            System.out.println("\u001B[34m==================\nTest passed.\t✓\n==================");
+        } else
+        {
+            System.out.println("\u001B[31m==================\nTest failed.\t✖\n==================");
+        }
         return testResult;
     }
     // logout method
     public boolean Logout() {
         WebElement logoutIcon = wait(driver.findElement(By.cssSelector("i.fa.fa-sign-out")));
         logoutIcon.click();
-        WebElement login = wait(driver.findElement(By.xpath("//input[@id='login']")));
+//        WebElement login = wait(driver.findElement(By.xpath("//input[@id='login']")));
+        WebElement login = wait(driver.findElement(By.id("username")));
         if (login.isDisplayed()){
-            System.out.println("User Logged out successfully.");
+            System.out.println("Logout successfully.");
             return true;
         }
         else {
@@ -95,6 +106,7 @@ public class FunctionLibrary {
             return false;
         }
     }
+
     // close the browser
     public void closeTheBrowser() {
         driver.close();

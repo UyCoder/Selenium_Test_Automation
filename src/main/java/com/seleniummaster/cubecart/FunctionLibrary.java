@@ -9,7 +9,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 public class FunctionLibrary {
@@ -90,9 +89,11 @@ public class FunctionLibrary {
         addProductTab.click();
         WebElement productName = wait(driver.findElement(By.id("name")));
         productName.sendKeys(product.getProductName());
+
         WebElement condiriondDropdownList = wait(driver.findElement(By.id("condition")));
         Select conditionSelect= new Select(condiriondDropdownList);
         conditionSelect.selectByVisibleText(product.getProductCondition().name());
+
         WebElement productCode = wait(driver.findElement(By.id("product_code")));
         productCode.sendKeys(product.getProductCode());
         WebElement stockLevel = wait(driver.findElement(By.id("stock_level")));

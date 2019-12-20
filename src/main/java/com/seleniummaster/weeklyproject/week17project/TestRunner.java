@@ -10,7 +10,6 @@ public class TestRunner {
         // Create the testData object and week17Project object
         TestData testData = new TestData();
         FunctionLibrary week17project= new FunctionLibrary();
-
         // call the project methods
         week17project.openBrowser(testData.url);
         week17project.Login(testData.username, testData.password);
@@ -23,13 +22,27 @@ public class TestRunner {
         week17project.Logout();
         week17project.closeTheBrowser();
 
-        // if test passed then call reportHTML method from report class
+        // generate report as a html file
+        Report report = new Report();
         if (isNewsletterAdded){
-            System.out.println("Test case passed.");
-            Report report = new Report();
             report.reportHTML(isNewsletterAdded);
         }else{
-            System.out.println("Test case failed.");
+            report.reportHTML(isNewsletterAdded);
         }
+
+        // generate report as an excel file
+        if (isNewsletterAdded){
+            report.reportExcel(isNewsletterAdded);
+        }else{
+            report.reportExcel(isNewsletterAdded);
+        }
+
+        // generate report as CSV file
+        if (isNewsletterAdded){
+            report.reportCSV(isNewsletterAdded);
+        }else{
+            report.reportCSV(isNewsletterAdded);
+        }
+
     }
 }
