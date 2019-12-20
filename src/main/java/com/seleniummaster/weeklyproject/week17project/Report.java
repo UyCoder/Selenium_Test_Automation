@@ -22,7 +22,6 @@ public class Report {
         report.append("<html><head><title>Test Result</title></head><body>");
         report.append("<table border=1>");
         report.append("<tr><td>Test Name</td><td>Test Result</td></tr>");
-
         if (testResult) {
             report.append("<tr bgcolor=#5cd65c ><td>Add Newsletter</td> <td>Passed</td><tr>");
         }else {
