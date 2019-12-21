@@ -50,15 +50,15 @@ public class Report {
             excelUtility.writeToExcelFileMultipleCells(filename, "sheet1", excelData);
             System.out.println("Report saved as an Excel file. \nExcel File path:  "+filename);
     }
-    public void reportCSV(boolean tesResult) {
+
+    public void reportCSV(boolean testResult) {
         StringBuilder mycsv = new StringBuilder();
         mycsv.append("TestName,TestResult").append("\n");
-        if (tesResult){
-            mycsv.append("AddNewsletter,Passed");
-        } else
-        {
-            mycsv.append("AddNewsletter,Failed");
+        String isPassed = "Failed";
+        if (testResult){
+            isPassed="Passed";
         }
+        mycsv.append("AddNewsletter,").append(isPassed);
         String fileName = pathOfProject + "ResultOfWeek17Project.csv";
         File csvFile = new File(fileName);
         try {

@@ -53,6 +53,7 @@ public class FunctionLibrary {
         boolean testResult = false;
         WebElement newsletterbutton = wait(driver.findElement(By.xpath("//a[contains(text(),'Newsletters')]")));
         newsletterbutton.click();
+        sleep(5);
         WebElement createNewsletterButton = wait(driver.findElement(By.xpath("/html[1]/body[1]/div[2]/div[3]/div[1]/div[2]")));
         // xpath = //a[contains(text(),'Create Newsletter')]
         // css = div:nth-child(2) div:nth-child(3) div:nth-child(1) div.tab:nth-child(2) > a:nth-child(1)

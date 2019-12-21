@@ -85,6 +85,7 @@ public class FunctionLibrary {
         boolean testResult = false;
         WebElement productLink= wait(driver.findElement(By.id("nav_products")));
         productLink.click();
+        sleep(5);
         WebElement addProductTab = wait(driver.findElement(By.linkText("Add Product")));
         addProductTab.click();
         WebElement productName = wait(driver.findElement(By.id("name")));

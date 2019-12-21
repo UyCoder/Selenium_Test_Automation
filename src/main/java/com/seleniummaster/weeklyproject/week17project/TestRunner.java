@@ -22,27 +22,13 @@ public class TestRunner {
         week17project.Logout();
         week17project.closeTheBrowser();
 
-        // generate report as a html file
+        //*************** Generate Report *************
+        //generate report as a html file
         Report report = new Report();
-        if (isNewsletterAdded){
-            report.reportHTML(isNewsletterAdded);
-        }else{
-            report.reportHTML(isNewsletterAdded);
-        }
-
+        report.reportHTML(isNewsletterAdded);
         // generate report as an excel file
-        if (isNewsletterAdded){
-            report.reportExcel(isNewsletterAdded);
-        }else{
-            report.reportExcel(isNewsletterAdded);
-        }
-
+        report.reportExcel(isNewsletterAdded);
         // generate report as CSV file
-        if (isNewsletterAdded){
-            report.reportCSV(isNewsletterAdded);
-        }else{
-            report.reportCSV(isNewsletterAdded);
-        }
-
+        report.reportCSV(isNewsletterAdded);
     }
 }
