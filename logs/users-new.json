@@ -1,0 +1,23 @@
+{
+  "Users":[
+    {
+      "username":"testautomation1",
+      "password":"automation123!",
+      "role":"testing",
+      "userType":"automationtesting"
+    },
+    {
+      "username":"testautomation2",
+      "password":"automation123!",
+      "role":"testing",
+      "userType":"automationtesting"
+    },
+    {
+      "username":"testautomation4",
+      "password":"automation123!",
+      "role":"testing",
+      "userType":"automationtesting"
+    }
+  ],
+  "createdon": "2019-12-28"
+}
