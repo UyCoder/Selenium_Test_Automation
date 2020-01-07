@@ -8,6 +8,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * @email bughra1991@gmail.com
  */
 public class UserObject {
+    // this is how we map json element
     @JsonProperty("username") //anitaion
     private String username;
     @JsonProperty("password")
@@ -17,10 +18,11 @@ public class UserObject {
     @JsonProperty("userType")
     private String userType;
 
-
+    // default constructor
     public UserObject() {
     }
 
+    // constructor with all prameters
     public UserObject(
             String username,
             String password,
@@ -32,6 +34,7 @@ public class UserObject {
         this.userType = userType;
     }
 
+    // getter and setter
     public String getUsername() {
         return username;
     }

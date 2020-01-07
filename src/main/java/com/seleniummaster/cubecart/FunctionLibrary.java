@@ -24,13 +24,19 @@ public class FunctionLibrary {
         driver.get(siteName);
     }
 
-    public void Login(String userName, String userPassword) {
+    public boolean Login(String userName, String userPassword) {
         WebElement usernameTextBox = driver.findElement(By.name("username"));
         usernameTextBox.sendKeys(userName);
         WebElement passwordTextBox = driver.findElement(By.id("password"));
         passwordTextBox.sendKeys(userPassword);
         WebElement loginButton = driver.findElement(By.id("login"));
         loginButton.click();
+        sleep(3);
+        WebElement dashBoardLink = wait(driver.findElement(By.linkText("Dashboard")));
+        if (dashBoardLink.isDisplayed()) {
+            return true;
+        } else return false;
+
     }
     // use user object to provide username and password
     public void Login(User user) {
