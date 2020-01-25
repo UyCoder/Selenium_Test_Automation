@@ -1,0 +1,19 @@
+<suite name="Suite1" verbose="1">
+    <test name="Add New Client Test one" preserve-order="true">
+        <listeners>
+            <listener class-name="org.testng.reporters.EmailableReporter"/>
+        </listeners>
+        <classes>
+            <class name="com.seleniummaster.UIautomationFramework.PageObjectModel.TestRunner"/>
+        </classes>
+    </test>
+    <test name="Add New Client Test two" preserve-order="true">
+        <listeners>
+            <listener class-name="org.testng.reporters.EmailableReporter"/>
+        </listeners>
+        <classes>
+            <class name="com.seleniummaster.UIautomationFramework.PageObjectModel.TestRunner"/>
+        </classes>
+    </test>
+
+</suite>
