@@ -17,11 +17,11 @@ public class CustomerForQuery {
     @Test
     public void testQueryForCustomers() {
         String sql = "select id,name,birth,email from customers where id = ?";
-        Customer customer = queryForCustomers(sql, 13);
+        Customer customer = queryForCustomers(sql, 12);
         System.out.println(customer);
 
         sql = "select name,email from customers where name = ?";
-        Customer customer1 = queryForCustomers(sql, "周杰伦");
+        Customer customer1 = queryForCustomers(sql, "莫扎特");
         System.out.println(customer1);
     }
 
@@ -89,7 +89,7 @@ public class CustomerForQuery {
             conn = JDBCUtils.getConnection();
             String sql = "select id,name,email,birth from customers where id = ?";
             ps = conn.prepareStatement(sql);
-            ps.setObject(1, 1);
+            ps.setObject(1, 2);
 
             //执行,并返回结果集
             resultSet = ps.executeQuery();
@@ -102,6 +102,7 @@ public class CustomerForQuery {
                 String email = resultSet.getString(3);
                 Date birth = resultSet.getDate(4);
 
+                // ئۇچۇرنى چىقىرىش ئۇسۇلى. ئەڭ ياخشىسى ئۈچىنچىسى
                 //方式一：
 //			System.out.println("id = " + id + ",name = " + name + ",email = " + email + ",birth = " + birth);
 

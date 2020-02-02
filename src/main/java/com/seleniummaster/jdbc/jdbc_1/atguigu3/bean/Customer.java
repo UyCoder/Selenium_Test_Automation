@@ -7,7 +7,8 @@ import java.sql.Date;
  * 一个数据表对应一个java类
  * 表中的一条记录对应java类的一个对象
  * 表中的一个字段对应java类的一个属性
- *
+ * // بىز دەل مۇشۇنداق جاۋا بىن ياسىۋالساق،
+ * ساندان ئۇچۇرىنى چىقىرىپ بەرگەندە رەتلىك ھالغا ئەكىلىپ چىقىرالايمىز.
  */
 public class Customer {
 
@@ -62,7 +63,7 @@ public class Customer {
 
     @Override
     public String toString() {
-        return "Customer [id=" + id + ", name=" + name + ", email=" + email + ", birth=" + birth + "]";
+        return "Customer [id=" + id + ", \t\tname=" + name + ", \t\t\temail=" + email + ", \t\t\tbirth=" + birth + "]";
     }
 
 

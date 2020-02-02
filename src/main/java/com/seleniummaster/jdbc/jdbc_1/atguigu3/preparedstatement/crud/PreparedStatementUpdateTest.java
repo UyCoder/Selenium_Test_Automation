@@ -3,10 +3,8 @@ package com.seleniummaster.jdbc.jdbc_1.atguigu3.preparedstatement.crud;
 import com.seleniummaster.jdbc.jdbc_1.atguigu3.util.JDBCUtils;
 import org.junit.Test;
 
-import java.io.InputStream;
 import java.sql.*;
 import java.text.SimpleDateFormat;
-import java.util.Properties;
 
 /*
  * 使用PreparedStatement来替换Statement,实现对数据表的增删改操作
@@ -86,15 +84,21 @@ public class PreparedStatementUpdateTest {
         PreparedStatement ps = null;
         try {
             // 1.读取配置文件中的4个基本信息
-            InputStream is = ClassLoader.getSystemClassLoader().getResourceAsStream("jdbc.properties");
+//            InputStream is = ClassLoader.getSystemClassLoader().getResourceAsStream("jdbc.properties");
+//
+//            Properties pros = new Properties();
+//            pros.load(is);
+//
+//            String user = pros.getProperty("user");
+//            String password = pros.getProperty("password");
+//            String url = pros.getProperty("url");
+//            String driverClass = pros.getProperty("driverClass");
 
-            Properties pros = new Properties();
-            pros.load(is);
+            String user = "root";
+            String password = "1987";
+            String url = "jdbc:mysql://localhost:3306/test?rewriteBatchedStatements=true";
+            String driverClass = "com.mysql.jdbc.Driver";
 
-            String user = pros.getProperty("user");
-            String password = pros.getProperty("password");
-            String url = pros.getProperty("url");
-            String driverClass = pros.getProperty("driverClass");
 
             // 2.加载驱动
             Class.forName(driverClass);

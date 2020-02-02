@@ -1,8 +1,6 @@
 package com.seleniummaster.jdbc.jdbc_1.atguigu3.util;
 
-import java.io.InputStream;
 import java.sql.*;
-import java.util.Properties;
 
 /**
  * @author shkstart Email:shkstart@126.com
@@ -20,15 +18,21 @@ public class JDBCUtils {
      */
     public static Connection getConnection() throws Exception {
         // 1.读取配置文件中的4个基本信息
-        InputStream is = ClassLoader.getSystemClassLoader().getResourceAsStream("jdbc.properties");
+//        InputStream is = ClassLoader.getSystemClassLoader().getResourceAsStream("jdbc.properties");
+//
+//        Properties pros = new Properties();
+//        pros.load(is);
 
-        Properties pros = new Properties();
-        pros.load(is);
+//        String user = pros.getProperty("user");
+//        String password = pros.getProperty("password");
+//        String url = pros.getProperty("url");
+//        String driverClass = pros.getProperty("driverClass");
 
-        String user = pros.getProperty("user");
-        String password = pros.getProperty("password");
-        String url = pros.getProperty("url");
-        String driverClass = pros.getProperty("driverClass");
+
+        String user = "root";
+        String password = "1987";
+        String url = "jdbc:mysql://localhost:3306/test?rewriteBatchedStatements=true";
+        String driverClass = "com.mysql.jdbc.Driver";
 
         // 2.加载驱动
         Class.forName(driverClass);
@@ -64,7 +68,7 @@ public class JDBCUtils {
      * @param conn
      * @param ps
      * @param rs
-     * @Description 关闭资源操作
+     * @Description 关闭资源操作  بۇ ساندان ئۇچۇرىنى كۆرۈپ بولغاندا ئۇچۇرنى تاقىغاندا ئىشلىتىلىدۇ.
      * @author shkstart
      * @date 上午10:21:15
      */

@@ -17,17 +17,17 @@ public class StatementTest {
     public void testLogin() {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("请输入用户名：");
+        System.out.print("ئىسىمنى كىرگۈزۈڭ：");
         String user = scanner.nextLine();
-        System.out.print("请输入密码：");
+        System.out.print("پارولنى كىرگۈزۈڭ：");
         String password = scanner.nextLine();
         //SELECT user,password FROM user_table WHERE user = '1' or ' AND password = '=1 or '1' = '1'
         String sql = "SELECT user,password FROM user_table WHERE user = '" + user + "' AND password = '" + password + "'";
         User returnUser = get(sql, User.class);
         if (returnUser != null) {
-            System.out.println("登录成功");
+            System.out.println("مۇۋاپپىقىيەتلىك كىردى.");
         } else {
-            System.out.println("用户名不存在或密码错误");
+            System.out.println("ئىشلەتكۈچى يوق ياكى پارول خاتا!!!");
         }
     }
 

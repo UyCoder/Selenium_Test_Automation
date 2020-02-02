@@ -24,12 +24,12 @@ public class PreparedStatementQueryTest {
     public void testGetForList() {
 
         String sql = "select id,name,email from customers where id < ?";
-        List<Customer> list = getForList(Customer.class, sql, 12);
+        List<Customer> list = getForList(Customer.class, sql, 15);
         list.forEach(System.out::println);
 
         String sql1 = "select order_id orderId,order_name orderName from `order`";
         List<Order> orderList = getForList(Order.class, sql1);
-        orderList.forEach(System.out::println);
+        orderList.forEach(System.out::println);// لىست ئىچىدىكى بارلىق مەزمۇننى بېسىپ چىقىرىش
     }
 
     public <T> List<T> getForList(Class<T> clazz, String sql, Object... args) {

@@ -96,7 +96,7 @@ public class OrderForQuery {
             conn = JDBCUtils.getConnection();
             String sql = "select order_id,order_name,order_date from `order` where order_id = ?";
             ps = conn.prepareStatement(sql);
-            ps.setObject(1, 1);
+            ps.setObject(1, 2);
 
             rs = ps.executeQuery();
             if (rs.next()) {
