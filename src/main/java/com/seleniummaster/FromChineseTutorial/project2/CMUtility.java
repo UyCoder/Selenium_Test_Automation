@@ -1,10 +1,10 @@
-package com.seleniummaster.weeklyproject.projectfromchinesetutorial.project2.util;
+package com.seleniummaster.FromChineseTutorial.project2;
 
 import java.util.Scanner;
 
 /**
  * @author Ahmet Bughra
- * @create 2020-02-04-2:23 AM
+ * @create 2020-02-04-2:14 AM
  * @email bughra1991@gmail.com
  */
 public class CMUtility {

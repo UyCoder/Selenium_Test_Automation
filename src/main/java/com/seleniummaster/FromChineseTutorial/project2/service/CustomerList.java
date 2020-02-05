@@ -1,6 +1,6 @@
-package com.seleniummaster.weeklyproject.projectfromchinesetutorial.project2.service;
+package com.seleniummaster.FromChineseTutorial.project2.service;
 
-import com.seleniummaster.weeklyproject.projectfromchinesetutorial.project2.bean.Customer;
+import com.seleniummaster.FromChineseTutorial.project2.bean.Customer;
 
 /**
  * @author Ahmet Bughra

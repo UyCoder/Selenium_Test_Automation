@@ -1,16 +1,29 @@
-package com.seleniummaster.weeklyproject.projectfromchinesetutorial.project2.bean;
+package com.seleniummaster.FromChineseTutorial.project2;
 
 /**
  * @author Ahmet Bughra
- * @create 2020-02-04-2:22 AM
+ * @create 2020-02-04-2:15 AM
  * @email bughra1991@gmail.com
  */
 public class Customer {
-    private String name;// 客户姓名
-    private char gender;// 性别
-    private int age;// 年龄
-    private String phone;// 电话号码
-    private String email;// 电子邮箱
+    private String name;
+    private char gender;
+    private int age;
+    private String phone;
+    private String email;
+
+    public Customer(String name, char gender, int age) {
+        this(name, gender, age, "", "");
+    }
+
+    public Customer(String name, char gender, int age, String phone,
+                    String email) {
+        this.name = name;
+        this.gender = gender;
+        this.age = age;
+        this.phone = phone;
+        this.email = email;
+    }
 
     public String getName() {
         return name;
@@ -52,15 +65,7 @@ public class Customer {
         this.email = email;
     }
 
-    public Customer() {
-    }
-
-    public Customer(String name, char gender, int age, String phone, String email) {
-        this.name = name;
-        this.gender = gender;
-        this.age = age;
-        this.phone = phone;
-        this.email = email;
-
+    public String getDetails() {
+        return name + "\t" + gender + "\t" + age + "\t\t" + phone + "\t" + email;
     }
 }

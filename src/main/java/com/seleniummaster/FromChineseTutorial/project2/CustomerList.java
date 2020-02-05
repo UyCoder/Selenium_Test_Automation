@@ -1,4 +1,4 @@
-package com.seleniummaster.weeklyproject.projectfromchinesetutorial.project2;
+package com.seleniummaster.FromChineseTutorial.project2;
 
 /**
  * @author Ahmet Bughra
