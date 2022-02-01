@@ -1,3 +1,2 @@
 # Selenium_Test_Automation
-java files
-##
+### This is a code from Selenium Test Automation bootcamp.
